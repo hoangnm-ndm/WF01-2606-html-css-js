@@ -1,0 +1,58 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+}
+
+/* Flex Container */
+
+.container {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+/* Flex Item */
+
+.item {
+  background: #3498db;
+  color: white;
+
+  height: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+  border-radius: 10px;
+
+  /* Desktop: 3 cột */
+
+  flex: 1 1 calc((100% - 40px) / 3);
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .item {
+    flex: 1 1 calc((100% - 20px) / 2);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+  .item {
+    flex: 1 1 100%;
+  }
+}
