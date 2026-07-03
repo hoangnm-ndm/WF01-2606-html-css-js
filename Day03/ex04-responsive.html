@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 24px 32px;
+        justify-content: space-between;
+        .product {
+          box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.5);
+          border-radius: 12px;
+          padding: 12px;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        .products {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 18px;
+          h2 {
+            font-size: 18px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .products {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="products">
+      <div class="product">
+        <img src="./image.png" alt="" />
+        <h2>Bộ đồ thể thao nam áo polo, quần shorts co giãn, thấm hút tốt</h2>
+        <p>200.000đ</p>
+      </div>
+
+      <div class="product">
+        <img src="./image.png" alt="" />
+        <h2>Bộ đồ thể thao nam áo polo, quần shorts co giãn, thấm hút tốt</h2>
+        <p>200.000đ</p>
+      </div>
+
+      <div class="product">
+        <img src="./image.png" alt="" />
+        <h2>Bộ đồ thể thao nam áo polo, quần shorts co giãn, thấm hút tốt</h2>
+        <p>200.000đ</p>
+      </div>
+
+      <div class="product">
+        <img src="./image.png" alt="" />
+        <h2>Bộ đồ thể thao nam áo polo, quần shorts co giãn, thấm hút tốt</h2>
+        <p>200.000đ</p>
+      </div>
+
+      <div class="product">
+        <img src="./image.png" alt="" />
+        <h2>Bộ đồ thể thao nam áo polo, quần shorts co giãn, thấm hút tốt</h2>
+        <p>200.000đ</p>
+      </div>
+
+      <div class="product">
+        <img src="./image.png" alt="" />
+        <h2>Bộ đồ thể thao nam áo polo, quần shorts co giãn, thấm hút tốt</h2>
+        <p>200.000đ</p>
+      </div>
+
+      <div class="product">
+        <img src="./image.png" alt="" />
+        <h2>Bộ đồ thể thao nam áo polo, quần shorts co giãn, thấm hút tốt</h2>
+        <p>200.000đ</p>
+      </div>
+
+      <div class="product">
+        <img src="./image.png" alt="" />
+        <h2>Bộ đồ thể thao nam áo polo, quần shorts co giãn, thấm hút tốt</h2>
+        <p>200.000đ</p>
+      </div>
+    </div>
+  </body>
+</html>

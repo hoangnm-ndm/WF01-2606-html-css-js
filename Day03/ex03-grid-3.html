@@ -15,24 +15,16 @@
         width: 100%;
         aspect-ratio: 1 / 1;
         border: 2px solid red;
-
-        /* display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(8, 1fr); */
-
         display: flex;
         flex-direction: column;
-
         .row {
           display: flex;
           width: 100%;
           height: calc(100% / 8);
         }
-
         .cell {
           width: calc(100% / 8);
         }
-
         .row:nth-child(odd) {
           .cell:nth-child(odd) {
             background-color: brown;
