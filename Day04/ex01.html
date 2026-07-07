@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="count()">Click me!</button>
+    <p>Hiển thị số lần bấm nút: 0 lần bấm</p>
+
+    <script>
+      // * Cach 1: viet vao cap the dong mo script
+      const pElement = document.getElementsByTagName("p")[0];
+      console.log(pElement);
+
+      let countValue = 0;
+      function count() {
+        countValue = countValue + 1;
+        console.log(countValue);
+        pElement.innerHTML = `Hiển thị số lần bấm nút: ${countValue} lần bấm`;
+      }
+    </script>
+
+    <!-- Cach 2: viet vao file external -->
+    <script src="./ex01.js"></script>
+  </body>
+</html>
