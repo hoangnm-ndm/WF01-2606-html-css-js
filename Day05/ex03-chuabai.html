@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const products = [
+        { id: 1, name: "apple", price: 20 },
+        { id: 2, name: "lemon", price: 10 },
+        { id: 3, name: "orange", price: 14 },
+        { id: 4, name: "tivi samsung", price: 2000 },
+      ];
+      // 1. Hãy tạo một mảng mới với giá sản phẩm được giảm 20%
+      // 2. Hãy thêm cho mỗi sản phẩm một thông tin quan trọng là rating: mặc định là 5.
+      // 3. Hãy làm lại cả yêu cầu 1 và yêu cầu 2 với phương thức map.
+      const newProducts = [];
+      for (let i = 0; i < products.length; i++) {
+        console.log({ ...products[i] });
+        newProducts.push({
+          ...products[i],
+          price: Math.floor(products[i].price * 0.8),
+          rating: 5,
+        });
+
+        // * spread operator
+      }
+
+      // console.log(newProducts);
+
+      // function sum(a, b) {
+      //   return a + b;
+      // }
+
+      // const sum2 = (a, b) => a + b;
+      // arrow function
+
+      // mappings = ánh xạ
+      const newProductsByMap = products.map((item) => ({
+        ...item,
+        price: Math.floor(item.price * 0.8),
+        rating: 5,
+      }));
+
+      console.log(newProductsByMap);
+
+      console.log(Array.prototype.map);
+
+      // * find -> tim kiem
+      // * filter -> loc
+      // * includes -> kiem tra xem mang co ton tai phan tu hay khong?
+      // * foreach -> duyet tung phan tu cua mang, khong tra ve gi ca
+      // * map -> anh xa mang cu thanh 1mang moi.
+      // * push -> them vao cuoi mang
+      // * pop -> bot o cuoi mang
+      // * unshift -> them o dau mang
+      // * shift -> bot o dau mang.
+      // * Ngoai ra co the xem them: slice, splice, reduce
+    </script>
+  </body>
+</html>

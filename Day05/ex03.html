@@ -8,12 +8,62 @@
 
   <body>
     <script>
+      // const products = [
+      //   { id: 1, name: "apple", price: 20 },
+      //   { id: 2, name: "lemon", price: 10 },
+      //   { id: 3, name: "orange", price: 14 },
+      // ];
+      // 1. Hãy tạo một mảng mới với giá sản phẩm được giảm 20%
+      // 2. Hãy thêm cho mỗi sản phẩm một thông tin quan trọng là rating: mặc định là 5.
+      // 3. Hãy làm lại cả yêu cầu 1 và yêu cầu 2 với phương thức map.
+
+      // Quoc Khanh
+      const product = [
+        { id: 1, name: "apple", price: 20 },
+        { id: 2, name: "lemon", price: 10 },
+        { id: 3, name: "orange", price: 14 },
+      ];
+      // console.log(product);
+
+      // const product1 = []; // array rỗng
+
+      // for (let i = 0; i < product.length; i++) {
+      //   product[i].price = product[i].price * 0.8;
+      //   product[i].rating = 5;
+      //   product1[i] = product[i];
+
+      //   // * không nên thay đổi mảng gốc nếu bài yêu cầu chỉ tạo mảng mới.
+      // }
+
+      // console.log(product1);
+
+      // ctrl/cmd + /
+      // Tai Anh
+      // const discount = products.map(({ price, ...rest }) => ({
+      //   ...rest,
+      //   price: price * 0.8,
+      //   rating: 5,
+      // }));
+
+      // Anh Tu
+
       const products = [
         { id: 1, name: "apple", price: 20 },
         { id: 2, name: "lemon", price: 10 },
         { id: 3, name: "orange", price: 14 },
       ];
-      // Hãy tạo một mảng mới với giá sản phẩm được giảm 20%
+
+      // 1&2
+      const newProducts = [];
+
+      for (let index = 0; index < products.length; index++) {
+        newProducts.push({
+          id: products[index].id,
+          name: products[index].name,
+          price: products[index].price * 0.8,
+          rating: 5,
+        });
+      }
     </script>
   </body>
 </html>
