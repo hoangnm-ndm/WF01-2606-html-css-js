@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let myString = "Hoang";
+      console.log(myString[0]);
+      myString[0] = "X";
+      console.log(myString);
+      myString = "Toi la Hoang day";
+      console.log(myString);
+
+      const myInfor = {
+        name: "Hoang",
+        stack: [
+          "PHP",
+          "python",
+          {
+            name: "JS",
+          },
+        ],
+      };
+      myInfor.name = "Hoang Minh";
+      console.log(myInfor);
+      // myInfor = {
+      //   name: "Thanos",
+      // };
+      myInfor.name = "Thanos";
+      console.log(myInfor);
+
+      // * Nên khai báo các reference type bằng const và cập nhật chúng bằng phương thức hoặc cách thức đặc biệt
+    </script>
+  </body>
+</html>
