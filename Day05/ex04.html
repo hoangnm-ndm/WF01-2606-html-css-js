@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #products {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      button {
+        padding: 12px 24px;
+      }
+    </style>
   </head>
   <body>
     <h1>Xin chao ban!</h1>
+    <div id="products"></div>
     <button id="prevBtn">&lt;</button>
-    <span id="currenPage"></span>
+    <span id="currentPage"></span>
     <button id="nextBtn">&gt;</button>
     <script type="module" src="./data.js"></script>
     <script type="module" src="./ex04.js"></script>

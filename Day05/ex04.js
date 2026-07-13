@@ -16,34 +16,48 @@ const simplified = products.map((product) => ({
   category: product.category,
   brand: product.brand,
   description: product.description,
+  thumbnail: product.thumbnail,
 }));
-console.log("B1");
-console.log(simplified);
-
-const cheapBeautyProducts = simplified.filter(
-  (product) => product.category === "beauty" && product.price < 100
-);
-console.log("\n B2");
-console.log(cheapBeautyProducts);
-
-const sortedProductsByPrice = simplified.toSorted((a, b) => a.price - b.price);
-console.log("\n B3");
-console.log(sortedProductsByPrice);
-
-const targetProduct = products.find(
-  (product) => product.sku === "FRA-DOL-DOL-009"
-);
-console.log("\n B4");
-console.log(targetProduct);
 
 // Gặp bài khó quá -> Dùng AI hướng dẫn -> tự xem lại đáp án, kiểm tra, đối chiếu, xác nhận -> tích luỹ kiến thức -> Luyện code tay nếu có thời gian
 
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
+const currentPageEle = document.getElementById("currentPage");
+const productsEle = document.getElementById("products");
+let currentPage = 1;
+let limit = 4;
+let start = (currentPage - 1) * limit;
+let paginatedProducts = simplified.slice(start, start + 4);
 
 nextBtn.addEventListener("click", function () {
-  console.log("next");
+  currentPage++;
+  reRender(currentPage);
 });
 prevBtn.addEventListener("click", function () {
-  console.log("prev");
+  currentPage--;
+  reRender(currentPage);
 });
+
+function reRender(currentPage = 1) {
+  start = (currentPage - 1) * limit;
+  currentPageEle.innerText = currentPage;
+  paginatedProducts = simplified.slice(start, start + 4);
+  const productContent = paginatedProducts
+    .map(
+      (item) =>
+        `<div>
+      <h2>${item.title}</h2>
+      <img src="${item.thumbnail}" alt="" />
+      <p>Price: ${item.price}</p>
+    </div>`
+    )
+    .join("");
+  productsEle.innerHTML = productContent;
+}
+
+reRender();
+
+/**
+ * Validate page
+ */
